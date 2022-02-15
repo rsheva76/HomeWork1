@@ -5,7 +5,7 @@ const int_max = Math.max(apple, orange, tomato);
 const int_min = Math.min(apple, orange, tomato);
 const int_sum = apple + orange + tomato;
 const sumWithoutFractions = Math.floor(apple) + Math.floor(orange) + Math.floor(tomato);
-const sumRoundedHundreds = Math.round(apple / 100) * 100 + Math.round(orange / 100) * 100 + Math.round(tomato / 100) * 100;
+const sumRoundedHundreds = Math.ceil(apple / 100) * 100 + Math.ceil(orange / 100) * 100 + Math.ceil(tomato / 100) * 100;
 const evenNumberSum = sumWithoutFractions % 2 === 0;
 const change = 500 - int_sum;
 const averagePrice = int_sum / 3;
