@@ -1,26 +1,56 @@
 "use strict"
 
-const apple = 15.678, orange = 123.965, tomato = 90.2345;
-const int_max = Math.max(apple, orange, tomato);
-const int_min = Math.min(apple, orange, tomato);
-const int_sum = apple + orange + tomato;
-const sumWithoutFractions = Math.floor(apple) + Math.floor(orange) + Math.floor(tomato);
-const sumRoundedHundreds = Math.round(apple / 100) * 100 + Math.round(orange / 100) * 100 + Math.round(tomato / 100) * 100;
-const evenNumberSum = sumWithoutFractions % 2 === 0;
-const change = 500 - int_sum;
-const averagePrice = int_sum / 3;
-const randomDiscount = Math.round(Math.random() * 100);
-const sumWithDiscount = +(int_sum - (int_sum * randomDiscount / 100)).toFixed(2);
-const netProfit = int_sum / 2 - int_sum * randomDiscount / 100;
+const APPLE = 15.678
+const ORANGE = 123.965
+const TOMATO = 90.2345
 
-document.getElementById("int_max").innerHTML = int_max;
-document.getElementById("int_min").innerHTML = int_min;
-document.getElementById("int_sum").innerHTML = int_sum;
-document.getElementById("sumWithoutFractions").innerHTML = sumWithoutFractions;
-document.getElementById("sumRoundedHundreds").innerHTML = sumRoundedHundreds;
-document.getElementById("evenNumberSum").innerHTML = evenNumberSum;
-document.getElementById("change").innerHTML = change;
-document.getElementById("averagePrice").innerHTML = averagePrice.toFixed(2);
-document.getElementById("randomDiscount").innerHTML = randomDiscount;
-document.getElementById("sumWithDiscount").innerHTML = sumWithDiscount;
-document.getElementById("netProfit").innerHTML = netProfit.toFixed(2);
+// exercise_1
+const INT_MAX = Math.max(APPLE, ORANGE, TOMATO)
+
+// exercise_2
+const INT_MIN = Math.min(APPLE, ORANGE, TOMATO)
+
+// exercise_3
+const INT_SUM = APPLE + ORANGE + TOMATO
+
+// exercise_4
+const SUM_WITHOUT_FRACTIONS =
+   Math.floor(APPLE) +
+   Math.floor(ORANGE) +
+   Math.floor(TOMATO)
+
+// exercise_5
+const SUM_ROUNDED_HUNDREDS = Math.round(SUM_WITHOUT_FRACTIONS / 100) * 100
+
+// exercise_6
+const EVEN_NUMBER_SUM = SUM_WITHOUT_FRACTIONS % 2 === 0
+
+// exercise_7
+const CHANGE = 500 - INT_SUM
+
+// exercise_8
+const AVERAGE_PRICE = (INT_SUM / 3).toFixed(2)
+
+// exercise_9
+const RANDOM_DISCOUNT = Math.round(Math.random() * 100)
+
+// exercise_10
+const SUM_WITH_DISCOUNT = +(INT_SUM - (INT_SUM * RANDOM_DISCOUNT / 100)).toFixed(2)
+
+// exercise_11
+const NET_PROFIT = (INT_SUM / 2 - INT_SUM * RANDOM_DISCOUNT / 100).toFixed(2)
+
+
+
+// outputting data to a page
+document.getElementById("int_max").innerHTML = INT_MAX;
+document.getElementById("int_min").innerHTML = INT_MIN;
+document.getElementById("int_sum").innerHTML = INT_SUM;
+document.getElementById("sumWithoutFractions").innerHTML = SUM_WITHOUT_FRACTIONS;
+document.getElementById("sumRoundedHundreds").innerHTML = SUM_ROUNDED_HUNDREDS;
+document.getElementById("evenNumberSum").innerHTML = EVEN_NUMBER_SUM;
+document.getElementById("change").innerHTML = CHANGE;
+document.getElementById("averagePrice").innerHTML = AVERAGE_PRICE;
+document.getElementById("randomDiscount").innerHTML = RANDOM_DISCOUNT;
+document.getElementById("sumWithDiscount").innerHTML = SUM_WITH_DISCOUNT;
+document.getElementById("netProfit").innerHTML = NET_PROFIT;
